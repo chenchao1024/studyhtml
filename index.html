@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<style type="text/css">
+		
+		
+		img{
+			
+			transition: all 3s;
+		}
+		img:hover{
+			-webkit-filter: none;
+		}
+		
+		.img1{
+			-webkit-filter: blur(1px);;
+		}
+		
+		
+		.img2{
+			-webkit-filter: contrast(1);
+		}
+		
+		
+		body{
+			perspective: 1000px;
+/* 			background: pink; */
+			
+			
+		}
+		.lifang:hover{
+			transform: rotate3d(1,1,1,720deg);
+		
+		}
+			.lifang{
+				width: 200px;
+				height: 200px;
+				margin: 250px auto;
+				position: relative;
+				/* 保留3d */
+				transform-style: preserve-3d;
+					transition: all 8s;
+					animation: rotate linear 10s infinite;
+					
+			}
+			
+			
+			
+			@-webkit-keyframes rotate {              
+			        from {
+			            transform: rotateX(0deg) rotateY(0deg);
+			        }
+			        to {
+			            transform: rotateX(360deg) rotateY(360deg);
+			        }
+			    }
+			
+			
+			.page{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				/* 设置透明度 */
+				opacity: 0.9;
+			}
+			
+			.front{
+			background-image: url(img/img6.jpg);
+				background-size: 100% auto ;
+				transform: translateZ(100px);
+			}
+			
+			.back{
+			background-image: url(img/img2.jpg);
+				background-size: 100% auto;
+				transform: translateZ(-100px);
+			}
+			.right{
+			background-image: url(img/img.jpg);
+				background-size:auto 100% ;
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			.left{
+			background-image: url(img/img3.jpg);
+				background-size: 100% auto;
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			.top{
+			background-image: url(img/img5.jpg);
+				background-size: 100% auto;
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			.bottom{
+			background-image: url(img/img4.jpg);
+				background-size: 100% auto;
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+		</style>
+	</head>
+	<body>
+		<section class="showcase">
+			<div class="video-container">
+				<video src="img/video.mov" autoplay muted loop></video>
+			
+ 
+		   
+
+	<!-- <a href="https://baike.baidu.com/item/%E5%91%A8%E6%9D%B0%E4%BC%A6/129156?fr=aladdin">	<img  class="img2" src="img/zjl.jpg" style="width: 32%; height: auto; float: left; " /></a>
+		<a href="https://baike.baidu.com/item/%E8%94%A1%E5%BE%90%E5%9D%A4/8511458?fr=aladdin"><img class="img1" src="img/cxk2.jpg" style="float: right; width: 29%; height: auto;"/></a> -->
+		<!-- <img class="img3" src="img/pyy.jpg" style="width: 32%; height: auto; margin-left:100px;"/> -->
+		<div class="lifang">
+			<div class="page front"></div>
+			<div class="page back"></div>
+			<div class="page left"></div>
+			<div class="page right"></div>
+			<div class="page top"></div>
+			<div class="page bottom"></div>
+			
+		</div>
+		
+		</div>
+			
+		</section>
+		
+	</body>
+</html>
